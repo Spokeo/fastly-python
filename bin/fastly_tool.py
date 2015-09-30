@@ -11,7 +11,7 @@ def main():
     parser.add_argument("--vcl", required=True, help="path to the VCL file to be uploaded")
     args = parser.parse_args()
 
-    for loc in os.getcwd(), os.path.expanduser("~"), "/opt/fastly-python/config/", os.getcwd() + '/config/', os.getcwd():
+    for loc in os.getcwd(), os.path.expanduser("~"), "/etc/fastly/", os.getcwd() + '/config/', os.getcwd():
         try:
             with open(os.path.join(loc,"config.yml"), 'r') as f:
                 config = yaml.load(f)
