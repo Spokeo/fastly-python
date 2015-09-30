@@ -1,0 +1,3 @@
+api_key: ""
+service_name: "release-staging-spokeo"
+vcl_name: "bypass"
