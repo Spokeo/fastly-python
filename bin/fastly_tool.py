@@ -43,6 +43,7 @@ def main():
         else:
             client.upload_vcl(service.id, latest.number, vcl_name, vcl_content)
             print "\n[ Uploading VCL {0} ]\n".format(vcl_name)
+        client.set_main_vcl(service.id, latest.number, vcl_name)
         client.activate_version(service.id, latest.number)
         print "\n[ Activating version {0} ]\n".format(latest.number)
 
